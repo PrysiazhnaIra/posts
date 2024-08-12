@@ -1,0 +1,53 @@
+.postsBlock {
+  padding: 20px;
+}
+
+.listPost {
+  display: grid;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+@media (min-width: 320px) {
+  .listPost {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 768px) {
+  .listPost {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1024px) {
+  .listPost {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.itemPost {
+  border: 1px solid #ddd;
+  border: none;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #cad6cbca;
+}
+
+.titlePost {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.bodyPost {
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.imagePost {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
