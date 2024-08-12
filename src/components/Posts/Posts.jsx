@@ -16,6 +16,7 @@ export default function Posts() {
           <li key={post.id}>
             <h2>{post.title}</h2>
             <p>{post.body}</p>
+            {post.avatar && <img src={post.avatar} alt={post.title} />}
           </li>
         ))}
       </ul>

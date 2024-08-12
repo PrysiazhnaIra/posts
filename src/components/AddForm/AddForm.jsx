@@ -20,6 +20,7 @@ export default function AddForm() {
         <Form>
           <Field name="title" placeholder="Enter title" />
           <Field name="body" placeholder="Enter body" />
+          <Field name="avatar" placeholder="Enter avatar URL" />
           <button type="submit">Add post</button>
         </Form>
       </Formik>
