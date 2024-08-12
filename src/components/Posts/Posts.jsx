@@ -1,14 +1,16 @@
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { selectorPosts } from "../../redux/selectors";
 import css from "./Posts.module.css";
+import { deleteTodoThunk } from "../../redux/operations";
 
 export default function Posts() {
   const posts = useSelector(selectorPosts);
+  const dispatch = useDispatch();
 
-  if (!Array.isArray(posts)) {
-    // Return null or some other fallback UI if posts isn't an array
-    return <p>No posts available</p>;
-  }
+  //   if (!Array.isArray(posts)) {
+  //     // Return null or some other fallback UI if posts isn't an array
+  //     return <p>No posts available</p>;
+  //   }
 
   return (
     <div className={css.postsBlock}>
@@ -24,6 +26,12 @@ export default function Posts() {
                 className={css.imagePost}
               />
             )}
+            <button
+              onClick={() => dispatch(deleteTodoThunk(post.id))}
+              className={css.btnDlt}
+            >
+              Delete
+            </button>
           </li>
         ))}
       </ul>

@@ -26,3 +26,15 @@ export const addPostsThunk = createAsyncThunk(
     }
   }
 );
+
+export const deleteTodoThunk = createAsyncThunk(
+  "deleteTodo",
+  async (id, thunkAPI) => {
+    try {
+      await axios.delete(`posts/${id}`);
+      return id;
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error.message);
+    }
+  }
+);

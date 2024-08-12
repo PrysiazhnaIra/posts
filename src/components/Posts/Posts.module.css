@@ -10,6 +10,23 @@
   margin: 0;
 }
 
+.btnDlt {
+  padding: 8px 12px;
+  background-color: #cc7a7a;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  align-self: center;
+  width: 100px;
+  margin-top: 10px;
+}
+
+.btnDlt:hover {
+  background-color: #8b4040;
+}
+
 @media (min-width: 320px) {
   .listPost {
     grid-template-columns: 1fr;
@@ -34,6 +51,8 @@
   padding: 15px;
   border-radius: 8px;
   background-color: #cad6cbca;
+  display: flex;
+  flex-direction: column;
 }
 
 .titlePost {

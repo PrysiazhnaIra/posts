@@ -22,8 +22,16 @@ export default function AddForm() {
         className={css.formik}
       >
         <Form className={css.form}>
-          <Field name="title" placeholder="Enter title" className={css.field} />
-          <Field name="body" placeholder="Enter body" className={css.field} />
+          <Field
+            name="title"
+            placeholder="Enter your country"
+            className={css.field}
+          />
+          <Field
+            name="body"
+            placeholder="Enter your name"
+            className={css.field}
+          />
           <Field
             name="avatar"
             placeholder="Enter avatar URL"
