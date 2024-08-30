@@ -7,7 +7,7 @@ export default function Posts() {
   const posts = useSelector(selectorPosts);
   const dispatch = useDispatch();
 
-  const DEFAULT_AVATAR_URL = "/src/photo.png";
+  const DEFAULT_AVATAR_URL = "/photo.png";
 
   if (!Array.isArray(posts)) {
     // Return null or some other fallback UI if posts isn't an array
@@ -23,7 +23,7 @@ export default function Posts() {
             <p className={css.bodyPost}>{post.body}</p>
             {post.avatar && (
               <img
-                src={DEFAULT_AVATAR_URL || post.avatar}
+                src={post.avatar || DEFAULT_AVATAR_URL}
                 alt={post.title}
                 className={css.imagePost}
               />

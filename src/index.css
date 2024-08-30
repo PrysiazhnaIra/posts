@@ -19,4 +19,17 @@ body {
   align-items: center;
   min-height: 100vh;
   flex-direction: column;
+
+  background-image: url("/src/background.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: auto;
+  min-height: 100%;
 }
