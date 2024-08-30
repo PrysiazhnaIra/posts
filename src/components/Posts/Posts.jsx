@@ -7,10 +7,12 @@ export default function Posts() {
   const posts = useSelector(selectorPosts);
   const dispatch = useDispatch();
 
-  //   if (!Array.isArray(posts)) {
-  //     // Return null or some other fallback UI if posts isn't an array
-  //     return <p>No posts available</p>;
-  //   }
+  const DEFAULT_AVATAR_URL = "/src/photo.png";
+
+  if (!Array.isArray(posts)) {
+    // Return null or some other fallback UI if posts isn't an array
+    return <p>No posts available</p>;
+  }
 
   return (
     <div className={css.postsBlock}>
@@ -21,7 +23,7 @@ export default function Posts() {
             <p className={css.bodyPost}>{post.body}</p>
             {post.avatar && (
               <img
-                src={post.avatar}
+                src={DEFAULT_AVATAR_URL || post.avatar}
                 alt={post.title}
                 className={css.imagePost}
               />
